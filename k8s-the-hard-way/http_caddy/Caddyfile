@@ -1,0 +1,9 @@
+kubernetes.default.svc.cluster.local:80 {
+	reverse_proxy /healthz https://127.0.0.1:6443 {
+		transport http {
+			tls
+			tls_insecure_skip_verify
+			tls_trusted_ca_certs /var/lib/kubernetes/ca.pem
+		}
+	}
+}

@@ -1,0 +1,16 @@
+{
+  "CN": "YYG-Kubernetes.local",
+  "key": {
+    "algo": "rsa",
+    "size": 2048
+  },
+  "names": [
+    {
+      "C": "US",
+      "L": "Portland",
+      "O": "KubernetesYYG",
+      "OU": "CA",
+      "ST": "Oregon"
+    }
+  ]
+}

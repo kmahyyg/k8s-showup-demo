@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: k8s-showup-demo
+spec:
+  selector:
+    matchLabels:
+      run: k8s-showup
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        run: k8s-showup
+    spec:
+      containers:
+      - name: my-k8s-showup
+        image: ghcr.io/kmahyyg/k8s-showup:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8999
